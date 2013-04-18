@@ -16,10 +16,17 @@
 		4B93F17D171F9B8800A9A695 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B93F17C171F9B8800A9A695 /* Default.png */; };
 		4B93F17F171F9B8800A9A695 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B93F17E171F9B8800A9A695 /* Default@2x.png */; };
 		4B93F181171F9B8800A9A695 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B93F180171F9B8800A9A695 /* Default-568h@2x.png */; };
-		4B93F184171F9B8800A9A695 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F183171F9B8800A9A695 /* ViewController.m */; };
-		4B93F187171F9B8800A9A695 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B93F185171F9B8800A9A695 /* ViewController.xib */; };
+		4B93F184171F9B8800A9A695 /* FlashCardRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B93F183171F9B8800A9A695 /* FlashCardRootViewController.m */; };
+		4B93F187171F9B8800A9A695 /* FlashCardRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B93F185171F9B8800A9A695 /* FlashCardRootViewController.xib */; };
 		859D5768171FCC6F00906737 /* Vocabulary.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D5767171FCC6F00906737 /* Vocabulary.m */; };
 		859D576B171FD15F00906737 /* VocabularyDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 859D576A171FD15F00906737 /* VocabularyDict.m */; };
+		BF05FF06171FE72E00A65981 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF05FF04171FE19400A65981 /* AVFoundation.framework */; };
+		BF05FF09171FE75A00A65981 /* FlashCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF05FF08171FE75A00A65981 /* FlashCardViewController.m */; };
+		BF05FF11171FF22B00A65981 /* sound_big_0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF05FF0C171FF22B00A65981 /* sound_big_0@2x.png */; };
+		BF05FF12171FF22B00A65981 /* sound_big_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF05FF0D171FF22B00A65981 /* sound_big_1@2x.png */; };
+		BF05FF13171FF22B00A65981 /* sound_big_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF05FF0E171FF22B00A65981 /* sound_big_2@2x.png */; };
+		BF05FF14171FF22B00A65981 /* sound_big_3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF05FF0F171FF22B00A65981 /* sound_big_3@2x.png */; };
+		BF05FF15171FF22B00A65981 /* sound_big@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BF05FF10171FF22B00A65981 /* sound_big@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +43,21 @@
 		4B93F17C171F9B8800A9A695 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		4B93F17E171F9B8800A9A695 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		4B93F180171F9B8800A9A695 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		4B93F182171F9B8800A9A695 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4B93F183171F9B8800A9A695 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		4B93F186171F9B8800A9A695 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		4B93F182171F9B8800A9A695 /* FlashCardRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashCardRootViewController.h; sourceTree = "<group>"; };
+		4B93F183171F9B8800A9A695 /* FlashCardRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashCardRootViewController.m; sourceTree = "<group>"; };
+		4B93F186171F9B8800A9A695 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FlashCardRootViewController.xib; sourceTree = "<group>"; };
 		859D5766171FCC6F00906737 /* Vocabulary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vocabulary.h; sourceTree = "<group>"; };
 		859D5767171FCC6F00906737 /* Vocabulary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vocabulary.m; sourceTree = "<group>"; };
 		859D5769171FD15F00906737 /* VocabularyDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VocabularyDict.h; sourceTree = "<group>"; };
 		859D576A171FD15F00906737 /* VocabularyDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VocabularyDict.m; sourceTree = "<group>"; };
+		BF05FF04171FE19400A65981 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BF05FF07171FE75A00A65981 /* FlashCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashCardViewController.h; sourceTree = "<group>"; };
+		BF05FF08171FE75A00A65981 /* FlashCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlashCardViewController.m; sourceTree = "<group>"; };
+		BF05FF0C171FF22B00A65981 /* sound_big_0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sound_big_0@2x.png"; path = "EFHack2013/Image/sound_big_0@2x.png"; sourceTree = "<group>"; };
+		BF05FF0D171FF22B00A65981 /* sound_big_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sound_big_1@2x.png"; path = "EFHack2013/Image/sound_big_1@2x.png"; sourceTree = "<group>"; };
+		BF05FF0E171FF22B00A65981 /* sound_big_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sound_big_2@2x.png"; path = "EFHack2013/Image/sound_big_2@2x.png"; sourceTree = "<group>"; };
+		BF05FF0F171FF22B00A65981 /* sound_big_3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sound_big_3@2x.png"; path = "EFHack2013/Image/sound_big_3@2x.png"; sourceTree = "<group>"; };
+		BF05FF10171FF22B00A65981 /* sound_big@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "sound_big@2x.png"; path = "EFHack2013/Image/sound_big@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF05FF06171FE72E00A65981 /* AVFoundation.framework in Frameworks */,
 				4B93F16B171F9B8800A9A695 /* UIKit.framework in Frameworks */,
 				4B93F16D171F9B8800A9A695 /* Foundation.framework in Frameworks */,
 				4B93F16F171F9B8800A9A695 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +78,7 @@
 		4B93F15B171F9B8800A9A695 = {
 			isa = PBXGroup;
 			children = (
+				BF05FF0A171FF21000A65981 /* Recourse */,
 				4B93F170171F9B8800A9A695 /* EFHack2013 */,
 				4B93F169171F9B8800A9A695 /* Frameworks */,
 				4B93F167171F9B8800A9A695 /* Products */,
@@ -79,6 +96,7 @@
 		4B93F169171F9B8800A9A695 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BF05FF04171FE19400A65981 /* AVFoundation.framework */,
 				4B93F16A171F9B8800A9A695 /* UIKit.framework */,
 				4B93F16C171F9B8800A9A695 /* Foundation.framework */,
 				4B93F16E171F9B8800A9A695 /* CoreGraphics.framework */,
@@ -92,9 +110,11 @@
 				859D5765171FCC2C00906737 /* Model */,
 				4B93F179171F9B8800A9A695 /* AppDelegate.h */,
 				4B93F17A171F9B8800A9A695 /* AppDelegate.m */,
-				4B93F182171F9B8800A9A695 /* ViewController.h */,
-				4B93F183171F9B8800A9A695 /* ViewController.m */,
-				4B93F185171F9B8800A9A695 /* ViewController.xib */,
+				4B93F182171F9B8800A9A695 /* FlashCardRootViewController.h */,
+				4B93F183171F9B8800A9A695 /* FlashCardRootViewController.m */,
+				4B93F185171F9B8800A9A695 /* FlashCardRootViewController.xib */,
+				BF05FF07171FE75A00A65981 /* FlashCardViewController.h */,
+				BF05FF08171FE75A00A65981 /* FlashCardViewController.m */,
 				4B93F171171F9B8800A9A695 /* Supporting Files */,
 			);
 			path = EFHack2013;
@@ -123,6 +143,26 @@
 				859D576A171FD15F00906737 /* VocabularyDict.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BF05FF0A171FF21000A65981 /* Recourse */ = {
+			isa = PBXGroup;
+			children = (
+				BF05FF0B171FF21D00A65981 /* Image */,
+			);
+			name = Recourse;
+			sourceTree = "<group>";
+		};
+		BF05FF0B171FF21D00A65981 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				BF05FF0C171FF22B00A65981 /* sound_big_0@2x.png */,
+				BF05FF0D171FF22B00A65981 /* sound_big_1@2x.png */,
+				BF05FF0E171FF22B00A65981 /* sound_big_2@2x.png */,
+				BF05FF0F171FF22B00A65981 /* sound_big_3@2x.png */,
+				BF05FF10171FF22B00A65981 /* sound_big@2x.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,7 +220,12 @@
 				4B93F17D171F9B8800A9A695 /* Default.png in Resources */,
 				4B93F17F171F9B8800A9A695 /* Default@2x.png in Resources */,
 				4B93F181171F9B8800A9A695 /* Default-568h@2x.png in Resources */,
-				4B93F187171F9B8800A9A695 /* ViewController.xib in Resources */,
+				4B93F187171F9B8800A9A695 /* FlashCardRootViewController.xib in Resources */,
+				BF05FF11171FF22B00A65981 /* sound_big_0@2x.png in Resources */,
+				BF05FF12171FF22B00A65981 /* sound_big_1@2x.png in Resources */,
+				BF05FF13171FF22B00A65981 /* sound_big_2@2x.png in Resources */,
+				BF05FF14171FF22B00A65981 /* sound_big_3@2x.png in Resources */,
+				BF05FF15171FF22B00A65981 /* sound_big@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,9 +238,10 @@
 			files = (
 				4B93F177171F9B8800A9A695 /* main.m in Sources */,
 				4B93F17B171F9B8800A9A695 /* AppDelegate.m in Sources */,
-				4B93F184171F9B8800A9A695 /* ViewController.m in Sources */,
+				4B93F184171F9B8800A9A695 /* FlashCardRootViewController.m in Sources */,
 				859D5768171FCC6F00906737 /* Vocabulary.m in Sources */,
 				859D576B171FD15F00906737 /* VocabularyDict.m in Sources */,
+				BF05FF09171FE75A00A65981 /* FlashCardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,12 +256,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		4B93F185171F9B8800A9A695 /* ViewController.xib */ = {
+		4B93F185171F9B8800A9A695 /* FlashCardRootViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4B93F186171F9B8800A9A695 /* en */,
 			);
-			name = ViewController.xib;
+			name = FlashCardRootViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
