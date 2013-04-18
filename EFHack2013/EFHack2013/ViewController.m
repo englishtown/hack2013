@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self testCreateVocabulary];
+    [self pullVocabularyDataOfUnitId:383 withCulture:@"zh-CN"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -29,38 +29,34 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)testCreateVocabulary
+- (void)pullVocabularyDataOfUnitId:(int)unit_id withCulture:(NSString *)cultureCode
 {
-    // create test data
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
-    [dict setObject:@"afternoon" forKey:@"Word"];
-    [dict setObject:@"下午" forKey:@"Translation"];
-    [dict setObject:@"http://www.englishtown.com/etownresources/dictionary_mp3/Headword/US/c/ca/cak/cake_us_1.mp3" forKey:@"AudioPath"];
-    [dict setObject:@"noun" forKey:@"PartofSpeech"];
-    [dict setObject:@"ˌɑːftəˈnuːn" forKey:@"PhoneticPronunciationUK"];
-    [dict setObject:@"ˌɑːftəˈnuːn" forKey:@"PhoneticPronunciationUS"];
+    NSString *url = [NSString stringWithFormat:@"http://%@/hackthon/Overview/Unit/Unitoverview/LoadUnitOverviewInfo/?unit_id=%d&cultureCode=%@", SERVER_DOMAIN, unit_id, cultureCode];
     
-    NSMutableDictionary *dict2 = [[NSMutableDictionary alloc] init];
-    [dict2 setObject:@"American" forKey:@"Word"];
-    [dict2 setObject:@"美洲人;(尤指)美国人" forKey:@"Translation"];
-    [dict2 setObject:@"http://www.englishtown.com/etownresources/dictionary_mp3/Headword/US/A/American.mp3" forKey:@"AudioPath"];
-    [dict2 setObject:@"noun" forKey:@"PartofSpeech"];
-    [dict2 setObject:@"əˈmerɪkən" forKey:@"PhoneticPronunciationUK"];
-    [dict2 setObject:@"əˈmerɪkən" forKey:@"PhoneticPronunciationUS"];
+    dispatch_queue_t pullVocabulary = dispatch_queue_create("vocabulary", NULL);
+    dispatch_async(pullVocabulary, ^{
+        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString: url]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+        [self performSelectorOnMainThread:@selector(fetchedVocabularyData:)
+                               withObject:data waitUntilDone:YES];
+        });
+    });
+    dispatch_release(pullVocabulary);
+}
+
+- (void)fetchedVocabularyData:(NSData *)responseData {
+    //parse out the json data
+    NSError* error;
+    NSDictionary *json = [NSJSONSerialization
+                          JSONObjectWithData:responseData
+                          options:kNilOptions
+                          error:&error];
+    NSArray *jsonArray = [json objectForKey:@"Words"];
+    VocabularyDict *vDict = [VocabularyDict initWithObject:jsonArray];
     
-    NSMutableArray *a = [[NSMutableArray alloc] init];
-    [a addObject:dict];
-    [a addObject:dict2];
-    
-    // Sample of using 
-    VocabularyDict *vDict = [VocabularyDict initWithObject:a];
-    
-    // test parsed resutl
-    Vocabulary *v = [vDict objectForKey:@"afternoon"];
-    Vocabulary *v2 = [vDict objectForKey:@"American"];
-    
-    NSLog(@"Vocabulary word is: %@", v.word);
-    NSLog(@"Vocabulary word is: %@", v2.word);
+    Vocabulary *voc = [vDict objectForKey:[[vDict allKeys] objectAtIndex:0]];
+    NSLog(@"first vocabulary word is:%@ , translation: %@", voc.word, voc.translation);
 }
 
 @end

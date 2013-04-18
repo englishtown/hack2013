@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSString *partOfSpeech;
 @property (nonatomic, strong) NSString *pronunciationUK;
 @property (nonatomic, strong) NSString *pronunciationUS;
+@property (nonatomic, strong) NSString *sampleImage;
+@property (nonatomic, strong) NSString *sampleSentence;
 
 +(Vocabulary *)initWithObject:(NSDictionary *)obj;
 
